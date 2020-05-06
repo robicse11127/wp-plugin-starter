@@ -1,0 +1,20 @@
+{
+    "name": "rabiul/wp-plugin-starter",
+    "description": "A plugin starter boilerplate.",
+    "authors": [
+        {
+            "name": "MD. Rabiul Islam",
+            "email": "robizmailbox@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WPPS\\Admin\\": "admin/",
+            "WPGP\\Frontend\\": "frontend/",
+            "WPPS\\Includes\\": "includes/"
+        },
+        "files": [ "helpers/helpers.php" ]
+    }
+
+}
