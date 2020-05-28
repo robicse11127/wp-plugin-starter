@@ -23,6 +23,7 @@ require_once 'vendor/autoload.php';
 
 use WPPS\Admin\Admin;
 use WPPS\Frontend\Frontend;
+use WPPS\Includes\Books\Books;
 
 final class WP_Plugin_Starter {
 
@@ -85,6 +86,7 @@ final class WP_Plugin_Starter {
         // Load Class
         new Admin();
         new Frontend();
+        new Books();
     }
 
 }
