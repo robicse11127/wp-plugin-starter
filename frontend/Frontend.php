@@ -1,5 +1,5 @@
 <?php
-namespace WPGP\Frontend;
+namespace WPPS\Frontend;
 
 class Frontend {
 
@@ -17,13 +17,13 @@ class Frontend {
     * @return void
     */
     public function scripts_styles() {
-        wp_register_style( 'wpgp-frontend', WPGP_PLUGIN_URL . 'frontend/dist/css/frontend.min.css', [], rand(), 'all' );
-        wp_register_script( 'jquery-validator', WPGP_PLUGIN_URL . 'frontend/dist/js/jquery.validator.min.js', [ 'jquery' ], rand(), true );
-        wp_register_script( 'wpgp-frontend', WPGP_PLUGIN_URL . 'frontend/dist/js/frontend.min.js', [ 'jquery', 'jquery-validator' ], rand(), true );
+        wp_register_style( 'wpps-frontend', WPPS_PLUGIN_URL . 'frontend/dist/css/frontend.min.css', [], rand(), 'all' );
+        wp_register_script( 'jquery-validator', WPPS_PLUGIN_URL . 'frontend/dist/js/jquery.validator.min.js', [ 'jquery' ], rand(), true );
+        wp_register_script( 'wpps-frontend', WPPS_PLUGIN_URL . 'frontend/dist/js/frontend.min.js', [ 'jquery', 'jquery-validator' ], rand(), true );
 
-        wp_enqueue_style( 'wpgp-frontend' );
+        wp_enqueue_style( 'wpps-frontend' );
         wp_enqueue_script( 'jquery-validator' );
-        wp_enqueue_script( 'wpgp-frontend' );
+        wp_enqueue_script( 'wpps-frontend' );
 
         // Localizing the script
         $options = [
@@ -32,7 +32,7 @@ class Frontend {
             'ajaxUrl'  => admin_url( '/admin-ajax.php' ),
             'nonce'    => wp_create_nonce( 'b?le*;K7.T2jk_*(+3&[G[xAc8O~Fv)2T/Zk9N:GKBkn$piN0.N%N~X91VbCn@.4' ),
         ];
-        wp_localize_script( 'wpgp-frontend', 'frontendLocalizer', $options );
+        wp_localize_script( 'wpps-frontend', 'frontendLocalizer', $options );
     }
 
 }
