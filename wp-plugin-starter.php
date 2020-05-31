@@ -48,8 +48,8 @@ final class WP_Plugin_Starter {
      */
     public function plugin_constants() {
         define( 'WPPS_VERISON', self::version );
-        define( 'WPPS_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
-        define( 'WPPS_PLUGIN_URL', trailingslashit(plugins_url('/', __FILE__)) );
+        define( 'WPPS_PLUGIN_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+        define( 'WPPS_PLUGIN_URL', trailingslashit( plugins_url( '/', __FILE__ ) ) );
         define( 'WPPS_NONCE', 'b?le*;K7.T2jk_*(+3&[G[xAc8O~Fv)2T/Zk9N:GKBkn$piN0.N%N~X91VbCn@.4' );
     }
 

@@ -2,6 +2,7 @@
 namespace WPPS\Includes\Books;
 
 use WPPS\Includes\Books\PostType;
+use WPPS\Includes\Books\Template;
 
 class Books {
     /**
@@ -19,7 +20,6 @@ class Books {
     */
     public function init_modules() {
         new PostType();
-        // new Shortcodes();
-        // new Template();
+        new Template();
     }
 }
